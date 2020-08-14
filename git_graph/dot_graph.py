@@ -1,5 +1,5 @@
 import datetime
-
+import os
 import graphviz
 
 import git_graph.git_graph_class as gg
@@ -146,12 +146,12 @@ class DotGraph(graphviz.Digraph):
 
     def persist(self, form=DEFAULT_FORMAT, conceal=True):
         self.format = form
-        git_graph_path = self.git_path / '.gitGraph'
-        if not git_graph_path.is_dir():
-            git_graph_path.mkdir()
+        git_graph_path = os.path.join(self.git_path, '.gitGraph')
+        if not os.path.isdir(git_graph_path):
+            git_graph_path
         dot_file_name = datetime.datetime.now().strftime(
             '%Y_%m_%d_%H_%M_%S_git_graph.dot')
-        dot_file = git_graph_path / dot_file_name
+        dot_file = os.path.join(git_graph_path, dot_file_name)
         if conceal:
             self.render(dot_file)
         else:
