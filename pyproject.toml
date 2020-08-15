@@ -13,6 +13,7 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.6"  # Compatible python versions must be declared here
 flake8 = "*"
+networkx = "^2.4"
 
 [tool.poetry.dev-dependencies]
 pytest = "^3.0"
