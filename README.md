@@ -20,11 +20,11 @@
 from networkx.drawing.nx_pydot import write_dot
 from git_networkx import GitNX, Commit
 #everything
-All = gnx.GitNX('my/repo/path/that/has/a/.git')
+All = GitNX('my/repo/path/that/has/a/.git')
 write_dot(All, "myrepo.dot")
 
 #Commits
-Commits = gnx.GitNX('my/repo/path/that/has/a/.git', "c")
+Commits = GitNX('my/repo/path/that/has/a/.git', "c")
 write_dot(Commits, "mycommits.dot")
 
 #which is equivalent to the subgraph obtained by (not in terms of ops)
@@ -32,8 +32,8 @@ write_dot(Commits, "mycommits.dot")
 
 ```
 
-
 #### Suppose you had a log like the following:
+
 ```
 commit 9a99a4d85cb14005ca829e2cab8f626b4034b981 (HEAD -> master, dev)
 Author: CircArgs <quebecname@gmail.com>
@@ -52,8 +52,9 @@ Author: CircArgs <quebecname@gmail.com>
 Date:   Fri Aug 14 22:04:28 2020 -0400
 
     add file 1
-    
+
 ```
+
 then
 
 ```python
@@ -84,6 +85,6 @@ By default all nodes are added to the DiGraph.
 
 ```python
 # you can get your commits, branches and the head of your local repo simply with lch
-G=gnx.GitNX('../git_networkx_test/', "lch")
+G=GitNX('../git_networkx_test/', "lch")
 
 ```
