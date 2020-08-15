@@ -12,6 +12,6 @@ write_dot(All, "myrepo.dot")
 
 #Commits
 Commits = gnx.GitNX('..', "c")
-write_dot(Commits, "myrepo.dot")
+write_dot(Commits, "mycommits.dot")
 
 ```
