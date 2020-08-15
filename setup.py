@@ -11,40 +11,40 @@ except ImportError:
 
 import os.path
 
-readme = ""
+readme = ''
 here = os.path.abspath(os.path.dirname(__file__))
-readme_path = os.path.join(here, "README.rst")
+readme_path = os.path.join(here, 'README.rst')
 if os.path.exists(readme_path):
-    with open(readme_path, "rb") as stream:
-        readme = stream.read().decode("utf8")
+    with open(readme_path, 'rb') as stream:
+        readme = stream.read().decode('utf8')
 
 setup(
     long_description=readme,
-    name="git-networkx",
-    version="1.2",
-    description="Git graph to networkx",
-    python_requires="==3.*,>=3.6.0",
+    name='git-networkx',
+    version='1.2',
+    description='Git graph to networkx',
+    python_requires='==3.*,>=3.6.0',
     project_urls={"homepage": "https://github.com/CircArgs/git-graph"},
-    author="Nick Ouellet",
-    author_email="nick@ouellet.dev",
-    license="MIT",
-    keywords="git directed acyclic graph dag graphviz dot",
+    author='Henri-Olivier Duché',
+    author_email='hoduche@yahoo.fr',
+    maintainer='Nick Ouellet',
+    maintainer_email='nick@ouellet.dev',
+    license='MIT',
+    keywords='git directed acyclic graph dag graphviz dot',
     classifiers=[
-        "Programming Language :: Python :: 3",
-        "License :: OSI Approved :: MIT License",
-        "Operating System :: OS Independent",
+        'Programming Language :: Python :: 3',
+        'License :: OSI Approved :: MIT License',
+        'Operating System :: OS Independent'
     ],
-    packages=["git_graph"],
+    packages=['git_networkx'],
     package_dir={"": "."},
     package_data={},
-    install_requires=["flake8"],
+    install_requires=['flake8', 'networkx==2.*,>=2.4.0'],
     extras_require={
         "dev": [
-            "black==19.*,>=19.10.0.b0",
-            "dephell==0.*,>=0.8.3",
-            "pylint==2.*,>=2.5.2",
-            "pytest==3.*,>=3.0.0",
-            "pytest-cov==2.*,>=2.4.0",
+            "black==19.*,>=19.10.0.b0", "dephell==0.*,>=0.8.3",
+            "pylint==2.*,>=2.5.2", "pytest==3.*,>=3.0.0",
+            "pytest-cov==2.*,>=2.4.0"
         ]
     },
 )
