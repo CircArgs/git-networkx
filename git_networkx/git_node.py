@@ -5,7 +5,7 @@ class GitNode:
         self.data = data
 
     def __repr__(self):
-        return self.__name__+"("+repr(self.data)+")"
+        return type(self).__name__+"("+repr(self.data)+")"
 
     def __str__(self):
         return repr(self)
