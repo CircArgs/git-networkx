@@ -6,7 +6,7 @@ ___
 ## Install
 
 ### PyPi
-`pip install git-graph`
+`pip install git-networkx`
 ### Git
 `pip install git+https://github.com/CircArgs/git-networkx.git`
 
