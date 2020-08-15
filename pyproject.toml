@@ -1,18 +1,17 @@
 [tool]
 [tool.poetry]
 name = "git-networkx"
-version = "2.0.0"
+version = "2.0.1"
 description = "Git graph to networkx"
 license = "MIT"
-keywords = ["git", "directed", "acyclic", "graph", "dag", "graphviz", "dot"]
+keywords = ["git", "directed", "acyclic", "graph", "dag", "dot"]
 classifiers = ["Programming Language :: Python :: 3", "License :: OSI Approved :: MIT License", "Operating System :: OS Independent"]
 homepage = "https://github.com/CircArgs/git-graph"
-authors = ["Henri-Olivier Duché <hoduche@yahoo.fr>", "Nick Ouellet <nick@ouellet.dev>"]
+authors = ["Nick Ouellet <nick@ouellet.dev>", "Henri-Olivier Duché <hoduche@yahoo.fr>", ]
 readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.6"  # Compatible python versions must be declared here
-flake8 = "*"
 networkx = "^2.4"
 
 [tool.poetry.dev-dependencies]

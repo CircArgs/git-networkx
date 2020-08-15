@@ -21,16 +21,16 @@ if os.path.exists(readme_path):
 setup(
     long_description=readme,
     name='git-networkx',
-    version='2.0.0',
+    version='2.0.1',
     description='Git graph to networkx',
     python_requires='==3.*,>=3.6.0',
     project_urls={"homepage": "https://github.com/CircArgs/git-graph"},
-    author='Henri-Olivier Duché',
-    author_email='hoduche@yahoo.fr',
-    maintainer='Nick Ouellet',
-    maintainer_email='nick@ouellet.dev',
+    author='Nick Ouellet',
+    author_email='nick@ouellet.dev',
+    maintainer='Henri-Olivier Duché',
+    maintainer_email='hoduche@yahoo.fr',
     license='MIT',
-    keywords='git directed acyclic graph dag graphviz dot',
+    keywords='git directed acyclic graph dag dot',
     classifiers=[
         'Programming Language :: Python :: 3',
         'License :: OSI Approved :: MIT License',
@@ -39,7 +39,7 @@ setup(
     packages=['git_networkx'],
     package_dir={"": "."},
     package_data={},
-    install_requires=['flake8', 'networkx==2.*,>=2.4.0'],
+    install_requires=['networkx==2.*,>=2.4.0'],
     extras_require={
         "dev": [
             "black==19.*,>=19.10.0.b0", "dephell==0.*,>=0.8.3",
