@@ -1,7 +1,7 @@
 import collections as c
 import re
 
-import git_graph.git_functions as gf
+import git_networkx.git_functions as gf
 
 
 def build_git_trees(path, trees):

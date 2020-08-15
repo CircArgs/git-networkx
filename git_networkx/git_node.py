@@ -1,6 +1,6 @@
 
 
-class BaseNode:
+class GitNode:
     def __init__(self, data):
         self.data = data
 
@@ -11,51 +11,51 @@ class BaseNode:
         return str(self.data)
 
     def __eq__(self, other):
-        if not isinstance(other, BaseNode):
+        if not isinstance(other, GitNode):
             return False
         return self.data == other.data
     def __hash__(self):
         return self.data.__hash__()
 
-class Blob(BaseNode):
+class Blob(GitNode):
     pass
 
 
-class RemoteBranch(BaseNode):
+class RemoteBranch(GitNode):
     pass
 
 
-class Tree(BaseNode):
+class Tree(GitNode):
     pass
 
 
-class RemoteHead(BaseNode):
+class RemoteHead(GitNode):
     pass
 
 
-class Commit(BaseNode):
+class Commit(GitNode):
     pass
 
 
-class RemoteServer(BaseNode):
+class RemoteServer(GitNode):
     pass
 
 
-class LocalBranch(BaseNode):
+class LocalBranch(GitNode):
     pass
 
 
-class AnnotatedTag(BaseNode):
+class AnnotatedTag(GitNode):
     pass
 
 
-class LocalHead(BaseNode):
+class LocalHead(GitNode):
     pass
 
 
-class Tag(BaseNode):
+class Tag(GitNode):
     pass
 
 
-# class Upstream(BaseNode):
+# class Upstream(GitNode):
 #     pass
