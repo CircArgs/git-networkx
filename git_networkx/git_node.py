@@ -5,10 +5,10 @@ class GitNode:
         self.data = data
 
     def __repr__(self):
-        return repr(self.data)
+        return self.__name__+"("+repr(self.data)+")"
 
     def __str__(self):
-        return str(self.data)
+        return repr(self)
 
     def __eq__(self, other):
         if not isinstance(other, GitNode):
