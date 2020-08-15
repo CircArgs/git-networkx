@@ -32,6 +32,43 @@ write_dot(Commits, "mycommits.dot")
 
 ```
 
+
+#### Suppose you had a log like the following:
+```
+commit 9a99a4d85cb14005ca829e2cab8f626b4034b981 (HEAD -> master, dev)
+Author: CircArgs <quebecname@gmail.com>
+Date:   Fri Aug 14 22:05:30 2020 -0400
+
+    I like dogs
+
+commit 80798c310455976e08fedd9b367794692ebb54a6
+Author: CircArgs <quebecname@gmail.com>
+Date:   Fri Aug 14 22:04:58 2020 -0400
+
+    add file2 with text
+
+commit 8c7f9cea1f6323d793cd035e2178636d6ebf0a36
+Author: CircArgs <quebecname@gmail.com>
+Date:   Fri Aug 14 22:04:28 2020 -0400
+
+    add file 1
+    
+```
+then
+
+```python
+G=GitNX(".", "lch")
+
+print(list(G.neighbors(Commit("80798c310455976e08fedd9b367794692ebb54a6"))))
+# [Commit('8c7f9cea1f6323d793cd035e2178636d6ebf0a36')]
+
+print(list(G.predecessors(Commit("80798c310455976e08fedd9b367794692ebb54a6"))))
+# [Commit('9a99a4d85cb14005ca829e2cab8f626b4034b981')]
+
+print(list(G.predecessors(Commit('9a99a4d85cb14005ca829e2cab8f626b4034b981'))))
+# [LocalBranch('dev'), LocalBranch('master')]
+```
+
 ## Node Types
 
 | Node Type     | Letter | Node Type     | Letter |
