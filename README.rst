@@ -76,39 +76,21 @@ then
    print(list(G.predecessors(Commit('9a99a4d85cb14005ca829e2cab8f626b4034b981'))))
    # [LocalBranch('dev'), LocalBranch('master')]
 
-Node Types
-----------
+Nodes
+-----
 
-.. list-table::
-   :header-rows: 1
+This table shows what nodes can be in a graph. The ``Letter``\ s denote the filters for creation of the graph as the second positional argument to ``git_networkx.GitNX`` i.e. the ``nodes`` argument.
 
-   * - Node Type
-     - Letter
-     - Node Type
-     - Letter
-   * - blob
-     - b
-     - remote branch
-     - r
-   * - tree
-     - t
-     - remote head
-     - d
-   * - commit
-     - c
-     - remote server
-     - s
-   * - local branch
-     - l
-     - annotated tag
-     - a
-   * - local head
-     - h
-     - tag
-     - g
-   * - upstream link
-     - u
+As shown in above examples, the ``DiGraph`` from ``GitNX`` can be filtered by checking ``isinstance`` against the Node Classes below or by filtering by a an instance of one of the classes.
 
+Overall Node Class: ``GitNode``
+| Node kind      | Letter | Node Class                                         | Node kind      | Letter | Node Class                                         |
+| -------------- | :----: | -------------------------------------------------- | -------------- | :----: | -------------------------------------------------- |
+| blob           | b      | Blob                                               | remote branch  | r      | RemoteBranch                                       |
+| tree           | t      | Tree                                               | remote head    | d      | RemoteHead                                         |
+| commit         | c      | Commit                                             | remote server  | s      | RemoteServer                                       |
+| local branch   | l      | LocalBranch                                        | annotated tag  | a      | AnnotatedTag                                       |
+| local head     | h      | LocalHead                                          | tag            | g      | Tag                                                |
 
 By default all nodes are added to the DiGraph.
 
