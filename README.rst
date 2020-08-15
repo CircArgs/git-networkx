@@ -13,7 +13,7 @@ Install
 PyPi
 ^^^^
 
-``pip install git-graph``
+``pip install git-networkx``
 
 Git
 ^^^
