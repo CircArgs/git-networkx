@@ -84,13 +84,47 @@ This table shows what nodes can be in a graph. The ``Letter``\ s denote the filt
 As shown in above examples, the ``DiGraph`` from ``GitNX`` can be filtered by checking ``isinstance`` against the Node Classes below or by filtering by a an instance of one of the classes.
 
 Overall Node Class: ``GitNode``
-| Node kind      | Letter | Node Class                                         | Node kind      | Letter | Node Class                                         |
-| -------------- | :----: | -------------------------------------------------- | -------------- | :----: | -------------------------------------------------- |
-| blob           | b      | Blob                                               | remote branch  | r      | RemoteBranch                                       |
-| tree           | t      | Tree                                               | remote head    | d      | RemoteHead                                         |
-| commit         | c      | Commit                                             | remote server  | s      | RemoteServer                                       |
-| local branch   | l      | LocalBranch                                        | annotated tag  | a      | AnnotatedTag                                       |
-| local head     | h      | LocalHead                                          | tag            | g      | Tag                                                |
+
+.. list-table::
+   :header-rows: 1
+
+   * - Node kind
+     - Letter
+     - Node Class
+     - Node kind
+     - Letter
+     - Node Class
+   * - blob
+     - b
+     - Blob
+     - remote branch
+     - r
+     - RemoteBranch
+   * - tree
+     - t
+     - Tree
+     - remote head
+     - d
+     - RemoteHead
+   * - commit
+     - c
+     - Commit
+     - remote server
+     - s
+     - RemoteServer
+   * - local branch
+     - l
+     - LocalBranch
+     - annotated tag
+     - a
+     - AnnotatedTag
+   * - local head
+     - h
+     - LocalHead
+     - tag
+     - g
+     - Tag
+
 
 By default all nodes are added to the DiGraph.
 

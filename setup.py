@@ -21,7 +21,7 @@ if os.path.exists(readme_path):
 setup(
     long_description=readme,
     name='git-networkx',
-    version='2.1.2',
+    version='2.2.0',
     description='Git graph to networkx',
     python_requires='==3.*,>=3.6.0',
     project_urls={"homepage": "https://github.com/CircArgs/git-graph"},

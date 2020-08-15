@@ -11,7 +11,7 @@ class GitNode:
         return repr(self)
 
     def __eq__(self, other):
-        if not isinstance(other, GitNode):
+        if not type(other)==type(self):
             return False
         return self.data == other.data
     def __hash__(self):

@@ -1,7 +1,7 @@
 [tool]
 [tool.poetry]
 name = "git-networkx"
-version = "2.1.2"
+version = "2.2.0"
 description = "Git graph to networkx"
 license = "MIT"
 keywords = ["git", "directed", "acyclic", "graph", "dag", "dot"]
