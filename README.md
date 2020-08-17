@@ -21,11 +21,12 @@ from networkx.drawing.nx_pydot import write_dot
 from git_networkx import GitNX, Commit
 #everything
 All = GitNX('my/repo/path/that/has/a/.git')
-write_dot(All, "myrepo.dot")
+#networkx Digraph representing all nodes of the git repo
 
 #Commits
 Commits = GitNX('my/repo/path/that/has/a/.git', "c")
 write_dot(Commits, "mycommits.dot")
+#networkx Digraph representing only commits of the git repo
 
 #which is equivalent to the subgraph obtained by (not in terms of ops)
 [n for n in All if isinstance(n, Commit)]
